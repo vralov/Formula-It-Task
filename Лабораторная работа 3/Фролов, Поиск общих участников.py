@@ -14,5 +14,3 @@ def find_common_participants(participants_first_group, participants_second_group
     identical_participants.sort()
 
     return identical_participants
-
-# TODO Провеьте работу функции с разделителем отличным от запятой
