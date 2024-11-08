@@ -11,13 +11,14 @@ def count_letters(text):
                 letter_counts[lower_char] = 1
     return letter_counts
 
+
 # TODO Напишите функцию calculate_frequency
 
 def calculate_frequency(letter_counts):
     total_letters = sum(letter_counts.values())
     letter_frequencies = {}
     for letter, count in letter_counts.items():
-        letter_frequencies[letter] = f"{count / total_letters:.2f}"
+        letter_frequencies[letter] = f"{count / total_letters}"
     return letter_frequencies
 
 
@@ -63,4 +64,5 @@ letter_counts = count_letters(main_str)
 letter_frequencies = calculate_frequency(letter_counts)
 
 for letter, frequency in letter_frequencies.items():
-    print(f"{letter}: {frequency}")
+    frequency_float = float(frequency)
+    print(f"{letter}: {frequency_float:.2f}")
